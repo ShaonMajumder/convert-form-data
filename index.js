@@ -1,3 +1,10 @@
+const filterValue = (value) => {
+  value = (value == 'true' || value === true) ? 1 : value;
+  value = (value == 'false' || value === false) ? 0 : value;
+  value = (value == null || Number.isNaN(value) || value == 'null') ? '' : value;
+  return value;
+}
+
 export const convertFormData = (keyMain,common,dataForm) => {
   for (const [key, value] of Object.entries(common)) {
     // console.log(key,value)
