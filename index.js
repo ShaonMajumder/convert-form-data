@@ -5,15 +5,15 @@ const filterValue = (value) => {
   return value;
 }
 
-export const convertFormData = (keyMain,common,dataForm) => {
+export const jsonToFormdata = (keyMain,common,formData) => {
   for (const [key, value] of Object.entries(common)) {
     // console.log(key,value)
     if(value && typeof value == 'object'){
       if(value instanceof File){
         if(keyMain != ''){
-          dataForm.append(`${keyMain}[${key}]`, filterValue(value));
+          formData.append(`${keyMain}[${key}]`, filterValue(value));
         }else{
-          dataForm.append(`${key}`, filterValue(value));
+          formData.append(`${key}`, filterValue(value));
         }
       }
       else if(value && value.getMonth !== "undefined" && typeof value.getMonth === 'function')
@@ -24,24 +24,24 @@ export const convertFormData = (keyMain,common,dataForm) => {
         //   console.log('null in object')
         // }
         if(keyMain != ''){
-          dataForm.append(`${keyMain}[${key}]`, filterValue(value));
+          formData.append(`${keyMain}[${key}]`, filterValue(value));
         }else{
-          dataForm.append(`${key}`, filterValue(value));
+          formData.append(`${key}`, filterValue(value));
         }
       }else{
         if(keyMain != ''){
-          dataForm = convertFormData(keyMain+'['+key+']',value,dataForm)
+          formData = convertFormData(keyMain+'['+key+']',value,formData)
         }else{
-          dataForm = convertFormData(`${key}`,value,dataForm)
+          formData = convertFormData(`${key}`,value,formData)
         }
       }
     }else{
       if(keyMain != ''){
-        dataForm.append(`${keyMain}[${key}]`, filterValue(value));
+        formData.append(`${keyMain}[${key}]`, filterValue(value));
       }else{
-        dataForm.append(`${key}`, filterValue(value));
+        formData.append(`${key}`, filterValue(value));
       }
     }
   }
-  return dataForm;
+  return formData;
 };

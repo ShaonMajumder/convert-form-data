@@ -1,12 +1,15 @@
 {
   "name": "convert-form-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package takes a json object and convert it to FormData",
   "main": "index.js",
   "repository": "https://github.com/ShaonMajumder/convert-form-data.git",
   "author": "Shaon Majumder <smazoomder@gmail.com>",
   "license": "MIT",
   "private": false,
-  "keywords": ["json", "formdata"],
+  "keywords": [
+    "json",
+    "formdata"
+  ],
   "homepage": "https://my-new-project-website.com"
 }
