@@ -1,12 +1,12 @@
 {
   "name": "convert-form-data",
+  "packageManager": "yarn@3.5.1",
   "version": "1.0.3",
   "description": "This package takes a json object and convert it to FormData",
   "main": "index.js",
   "repository": "https://github.com/ShaonMajumder/convert-form-data.git",
   "author": "Shaon Majumder <smazoomder@gmail.com>",
   "license": "MIT",
-  "private": false,
   "keywords": [
     "json",
     "formdata"
