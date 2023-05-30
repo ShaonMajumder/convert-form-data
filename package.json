@@ -1,6 +1,6 @@
 {
   "name": "convert-form-data",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This package takes a json object and convert it to FormData",
   "main": "src/index.js",
   "repository": "https://github.com/ShaonMajumder/convert-form-data.git",
