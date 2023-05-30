@@ -2,7 +2,9 @@
 This package can take any json object and convert it to FormData.
 
 # Usage
-    - Use case 1 - you can use it - if you want to use formdata to upload your data in server.
+    jsonToFormdata - 
+        params: base_key, jsonObject, formDataObject
+        Output: FormData
 # Development Story
 Previously we are using json to post the data to the server.
 But, when, we wanted to upload many images with the post data;
