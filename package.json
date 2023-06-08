@@ -8,7 +8,8 @@
   "license": "MIT",
   "keywords": [
     "json",
-    "formdata"
+    "formdata",
+    "object converter"
   ],
   "homepage": "https://github.com/ShaonMajumder"
 }
